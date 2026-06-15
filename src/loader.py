@@ -5,8 +5,9 @@ Fonte: Portal da Transparência — dados.gov.br
 import pandas as pd
 from pathlib import Path
 
-RAW_DIR    = Path("data/raw")
-SAMPLE_DIR = Path("data/sample")
+_BASE      = Path(__file__).parent.parent   # raiz do projeto
+RAW_DIR    = _BASE / "data" / "raw"
+SAMPLE_DIR = _BASE / "data" / "sample"
 
 REGIOES = {
     "AC": "Norte", "AM": "Norte", "AP": "Norte", "PA": "Norte",
